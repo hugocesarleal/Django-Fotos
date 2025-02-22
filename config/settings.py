@@ -39,9 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "autenticacao",
     "core",
-    "cadastros",
     "fotos",
 ]
 
@@ -59,8 +57,6 @@ MIDDLEWARE = [
 ROOT_URLCONF = "config.urls"
 
 #integra com o sistema de auth padrao do Django
-
-AUTH_USER_MODEL = 'cadastros.Usuario'
 
 AUTHENTICATION_BACKENDS = [
 
@@ -103,7 +99,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.fotos',  # Nome do arquivo SQLite no diretório base
+        'NAME': BASE_DIR / 'db_fotos.sqlite3',  # Nome do arquivo SQLite no diretório base
     }
 }
 
